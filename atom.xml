@@ -1,0 +1,2456 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">CodePlayer Blog</title>
+    <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
+    <updated>2021-06-12T14:04:43&#43;08:00</updated>
+    <id>https://codeplayer-zzy.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://codeplayer-zzy.github.io/atom.xml" />
+    <author>
+            <name>codeplayer</name>
+            <uri>https://codeplayer-zzy.github.io/</uri>
+            
+                <email>2775152443@qq.com</email>
+            </author>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
+        <entry>
+            <title type="text">Hugo搭建个人博客&#43;Github部署（windows10）</title>
+            <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&#43;github%E9%83%A8%E7%BD%B2windows10/" />
+            <id>https://codeplayer-zzy.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&#43;github%E9%83%A8%E7%BD%B2windows10/</id>
+            <updated>2021-06-11T12:55:52&#43;08:00</updated>
+            <published>2021-06-10T09:45:53&#43;08:00</published>
+            <author>
+                    <name>codeplayer</name>
+                    <uri>https://codeplayer-zzy.github.io/</uri>
+                    <email>2775152443@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;Hugo搭建个人博客+Github部署（windows10）&lt;/p&gt;……</summary>
+            
+                <content type="html">&lt;p&gt;Hugo搭建个人博客+Github部署（windows10）&lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;作为程序爱好者，有一个属于自己的个人博客是一件多么开心的事啊！&lt;/strong&gt;&lt;br&gt;
+最近笔者搭建了一个属于我的博客网站，在这里献丑了。 ：） 地址   &lt;a href=&#34;https://codeplayer-zzy.github.io/&#34;&gt;https://codeplayer-zzy.github.io/&lt;/a&gt;
+这篇文章详细记录了搭建过程...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;Hugo是一个非常受欢迎的、开源的静态网站生成工具，和Hexo类似。 它速度快，扩展性强。（其中一种搭建工具）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;有GitHub账户（Github官网 &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt; ）&lt;/li&gt;
+&lt;li&gt;git工具安装并配置号（git工具 &lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt; ）&lt;/li&gt;
+&lt;li&gt;安装vs code（自选安装，vs code软件 &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;安装-hugo&#34;&gt;安装 hugo&lt;/h2&gt;
+&lt;p&gt;下面是笔者的安装过程，大家也可以看官网安装 &lt;a href=&#34;https://www.gohugo.org/&#34;&gt;https://www.gohugo.org/&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载hugo程序压缩包：前往 &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt; 下载和自己系统版本相符合的hugo程序压缩包。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压到某个文件夹中（路径不要有中文，而且自己要记得文件夹的路径），最好是不常改动的文件夹下边，以防文件被误删或者丢失。&lt;br&gt;
+&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/2021-06-10/23771092-0c3afaf81eecd59a.png&#34; alt=&#34;图片.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加hugo到系统环境变量PATH中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接下来，为了万无一失，还是要检查一下hugo是否安装完成。以管理员方式打开cmd命令窗口，然后输入以下指令：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果得到如下响应，（即显示版本信息），说明安装成功，接下来就可以玩转hugo了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo v0.83.1-5AFE0A57 windows/amd64 BuildDate=2021-05-02T14:38:05Z VendorInfo=gohugoio
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;生成站点&#34;&gt;生成站点&lt;/h2&gt;
+&lt;p&gt;使用Hugo快速生成站点，比如希望生成到根目录：（下面是 cmd 命令）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new site XXXX
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该命令执行后，便会在你选择的文件夹下生成名为“XXXX”的文件夹，我们在此称这个文件夹为站点文件的“根目录”。&lt;/p&gt;
+&lt;p&gt;这样就在 /XXXX目录里生成了初始站点，进去目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd XXXX
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;站点目录结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  ▸ archetypes/
+  ▸ content/
+  ▸ layouts/
+  ▸ static/
+    config.toml
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;安装主题以tranquilpeak主题为例&#34;&gt;安装主题（以tranquilpeak主题为例）&lt;/h2&gt;
+&lt;p&gt;到 &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;主题列表&lt;/a&gt; 挑选一个心仪的皮肤，比如你觉得 &lt;code&gt;tranquilpeak&lt;/code&gt; 皮肤不错，找到相关的 &lt;code&gt;GitHub&lt;/code&gt; 地址，进入目录 &lt;code&gt;themes&lt;/code&gt;，在 &lt;code&gt;themes&lt;/code&gt; 目录里把皮肤 &lt;code&gt;git clone&lt;/code&gt; 下来：&lt;/p&gt;
+&lt;p&gt;在根目录下使用 cmd 命令来到themes文件夹下，并且在&lt;a href=&#34;https://github.com/kakawait/hugo-tranquilpeak-theme&#34;&gt;tranquilpeak主题&lt;/a&gt;下很容易找到clone命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;# 进入 themes 目录
+$ cd themes
+$ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;下载完成 ：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/2021-06-10/23771092-96075264baaa8b2a.png&#34; alt=&#34;图片.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;配置主题&#34;&gt;配置主题&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;config.toml 文件是一个整站的配置。它给 Hugo 提供了如何构建站点的方式，比如全局的参数和菜单。Hugo 需要在源目录查找一个 config.toml 的配置文件。如果这个文件不存在，将会查找 config.yaml，然后是 config.json 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将 根目录 \themes\tranquilpeak\exampleSite 路径下的 config.toml 文件复制到根目录下，覆盖掉根目录下的config.toml文件。然后，我们在vscode中打开并对其作一定的修改就可以直接使用，具体可以修改的内容如下（以我自己的站点配置文件为例，其中需要改成自己的配置，请自行修改。）：（有点长）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Tranquilpeak
+# Version : 0.4.8-BETA
+# Author : Thibaud Leprêtre
+
+# I STRONGLY recommend you to use a CDN to speed up loading of pages.
+# There is many free CDN like Cloudinary or you can also use indirectly
+# by using services like Google Photos.
+
+# If you want to store images yourself, please read this guidelines:
+# For users, if you only use this theme, put your images directly in `source/assets/images` folder
+# But if you want to add local images, you can put your images directly in `source/assets/images` folder
+# For developpers, if you modify this theme, put your images in `source/images` folder and
+# use grunt task `build` to synchronize assets
+# 这是部署的链接地址，改成自己的。
+# 如果要自定义域名，那么这里可以直接用自定义域名也是可以的，当自定义域名配置好以后才能看出来效果
+baseURL = &amp;quot;https://codeplayer-zzy.github.io/&amp;quot;
+# 语言
+languageCode = &amp;quot;zh-cn&amp;quot;
+# 默认语言
+defaultContentLanguage = &amp;quot;zh-cn&amp;quot;
+# 标题
+title = &amp;quot;codeplayer的奇妙历险记&amp;quot;
+#主题
+theme = &amp;quot;tranquilpeak&amp;quot;
+# 评论系统名
+disqusShortname = &amp;quot;valine&amp;quot;
+
+# googleAnalytics = &amp;quot;UA-123-45&amp;quot;
+# 分页数
+paginate = 7
+
+# 通过将 canonifyurls 设置为 true，所有相对 URL 都将使用 baseurl 进行规范化。
+# 例如，假设您在站点范围的 config.toml 中定义了 baseurl = http://yoursite.example.com/，
+# 则相对 URL /css/foo.css 将变成绝对 URL http://yoursite.example.com/css/foo.css。
+canonifyurls = true
+
+# 时间格式
+[permalinks]
+  post = &amp;quot;/:year/:month/:slug/&amp;quot;
+
+# 类别名对应
+[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+  archive = &amp;quot;archives&amp;quot;
+
+# 作者信息
+[author]
+  name = &amp;quot;codeplayer&amp;quot;
+  bio = &amp;quot;好好学习，天天向上。&amp;quot;
+  job = &amp;quot;学生&amp;quot;
+  location = &amp;quot;jx&amp;quot;
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  gravatarEmail = &amp;quot;xxxxxx@qq.com&amp;quot;
+
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  # 头像地址
+  picture = &amp;quot;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/59161468.jpg&amp;quot;
+
+  # Your Twitter username without the @. E.g : thibaudlepretre
+  # twitter = &amp;quot;thibaudlepretre&amp;quot;
+  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
+  # googlePlus = &amp;quot;+ThibaudLepretre&amp;quot;
+
+# Menu Configuration 菜单配置
+[[menu.main]]
+  weight = 1
+  identifier = &amp;quot;首页&amp;quot;
+  name = &amp;quot;首页&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-home\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;/&amp;quot;
+[[menu.main]]
+  weight = 2
+  identifier = &amp;quot;类别&amp;quot;
+  name = &amp;quot;类别&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-bookmark\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;/categories&amp;quot;
+[[menu.main]]
+  weight = 3
+  identifier = &amp;quot;标签&amp;quot;
+  name = &amp;quot;标签&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-tags\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;/tags&amp;quot;
+[[menu.main]]
+  weight = 4
+  identifier = &amp;quot;归档&amp;quot;
+  name = &amp;quot;归档&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-archive\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;/archives&amp;quot;
+[[menu.main]]
+  weight = 5
+  identifier = &amp;quot;关于&amp;quot;
+  name = &amp;quot;关于&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-question\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;/#about&amp;quot;
+
+
+#github的链接，改为自己的Github链接就行了
+[[menu.links]]
+  weight = 1
+  identifier = &amp;quot;github&amp;quot;
+  name = &amp;quot;GitHub&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-github\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;https://github.com/codeplayer-zzy/&amp;quot;
+# [[menu.links]]
+  # weight = 2
+  # identifier = &amp;quot;stackoverflow&amp;quot;
+  # name = &amp;quot;Stack Overflow&amp;quot;
+  # pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-stack-overflow\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  # url = &amp;quot;https://stackoverflow.com/users/636472/kakawait&amp;quot;
+
+[[menu.misc]]
+  weight = 1
+  identifier = &amp;quot;rss&amp;quot;
+  name = &amp;quot;RSS&amp;quot;
+  pre = &amp;quot;&amp;lt;i class=\&amp;quot;sidebar-button-icon fa fa-lg fa-rss\&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+  url = &amp;quot;/index.xml&amp;quot;
+
+#一些辅助功能的参数设置
+[params]
+  # Customize date format use to render blog post date, categories and other
+  # You must use date format used by Go Time package https://golang.org/pkg/time/
+  # Months (not work with short month like &amp;quot;jan&amp;quot;, &amp;quot;feb&amp;quot;, etc) are translated if translation exists on i18n folders
+  # Default format is: January 2, 2006
+  # dateFormat = &amp;quot;2 January 2006&amp;quot;
+
+  # Global keywords configuration. Following keywords will be add to every pages
+  # keywords = [&amp;quot;development&amp;quot;, &amp;quot;next-gen&amp;quot;]
+
+  # Syntax highlighter, possible choice between: &amp;quot;highlight.js&amp;quot; (recommanded) and &amp;quot;prism.js&amp;quot; (experimental)
+  # You can comment it to disable syntax highlighting
+  # 代码高亮，可以选择两个中其中一个
+  syntaxHighlighter = &amp;quot;highlight.js&amp;quot;
+
+  # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
+  # 阅读时，把侧边栏缩进去，很方便
+  clearReading = true
+
+  # Define categories will create hierarchy between parents: `categories = [&amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot;]` will consider &amp;quot;bar&amp;quot; a sub-category of &amp;quot;foo&amp;quot;.
+  # If false it will flat categories.
+  # 和分类与标签有关，直接默认就是了
+  hierarchicalCategories = true
+
+  # 站点的描述
+  description = &amp;quot;爱读：《月亮与六便士》，加油吧&amp;quot;
+
+  # Customization
+  # Define the behavior of the sidebar
+  # 1: Display extra large sidebar on extra large screen, large sidebar on large screen,
+  #    medium sidebar on medium screen and header bar on small screen and
+  # extra large sidebar is swiped on extra large screen and large sidebar on all lower screen (default)
+  # 2: Display large sidebar on large screen, medium sidebar on medium screen and
+  #    header bar on small screen and large sidebar is swiped
+  # 3: Display medium sidebar on large and medium screen and header bar on small screen and
+  #    medium sidebar is swiped
+  # 4: Display header bar on all screens, extra large sidebar is swiped on extra large screen and
+  #    large sidebar is swiped on all lower screens
+  # 5: Display header bar on all screens and large sidebar is swiped on large screen
+  # 6: Display header bar on all screens and medium sidebar is swiped
+  # 这个是侧边栏的模式，1-6代表不同的宽度之类的，2看起来很好看，自己每个都试试就知道效果了，或者直接看上边的英文介绍
+  sidebarBehavior = 2
+
+  # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
+  # There is many free CDN like Cloudinary or you can also use indirectly
+  # by using services like Google Photos.
+  # Current image is on AWS S3 and delivered by AWS CloudFront.
+  # Otherwise put your image, for example `cover.jpg` in folder `static/images/`,
+  # and use relative url : `images/cover.jpg`
+  # 站点的封面地址，也可以自己添加一些图片进去
+  coverImage = &amp;quot;images/站点封面地址.jpg&amp;quot;
+
+  # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
+  # 照片墙，或者叫图片走廊，用于默认缩略图或者文章封面的功能，前提是你得存放照片
+  imageGallery = true
+
+  # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
+  # 文章缩略图功能
+  thumbnailImage = true
+  
+  # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
+  # Set this value to `right` if you have old posts to keep the old style on them
+  # and define `thumbnailImagePosition` on a post to overwrite this setting
+  # 缩略图的位置，默认为bottom，即在下边，可以选top，left或者right，这是默认的，也可以在文章里重新定义
+  thumbnailImagePosition = &amp;quot;bottom&amp;quot;
+  
+  # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
+  # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
+  # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
+  # 自动缩略图，就是从照片墙中选一张用作缩略图，直接默认吧
+  autoThumbnailImage = true
+  
+  # Your favicon path, default is &amp;quot;/favicon.png&amp;quot;
+  # 很好玩的功能，就是访问时，浏览器标签页那里显示的站点图标
+  # favicon = &amp;quot;/favicon.png&amp;quot;
+
+  # Header configuration
+  # The link at the right of the header is customizable
+  # You can add a link (as an icon) at the right of the header instead of the author&#39;s gravatar image or author&#39;s picture.
+  # By default, author&#39;s gravatar or author&#39;s picture is displayed.
+  #     url: /#search
+  #     icon: search
+  #     class: st-search-show-outputs
+
+  # Display `Next` on left side of the pagination, and `Prev` on right side one.
+  # If you set this value to `true`, these positions swap.
+  # swapPaginator = true
+
+  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+  # they have to be referred from static root. Example
+  # 自定义的css文件目录
+  # [[params.customCSS]]
+  #   href = &amp;quot;css/mystyle.css&amp;quot;
+
+  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
+  # they have to be referred from static root. Example
+  #自定义js插件，这里采用一个很好看的点击鼠标出现爱心的特效
+  #将在这个主题的目录下static/js中新建文件clicklove.js
+  #然后将下边给出的插件代码复制进去，就可以了
+   [[params.customJS]]
+     src = &amp;quot;js/clicklove.js&amp;quot;
+
+  # 雪花特效！类似于点击爱心特效，在同样的文件夹下创建snow.js然后将下文中雪花的代码复制进去就可以了
+  # [[params.customJS]]
+  #   src = &amp;quot;js/snow.js&amp;quot;
+
+  # 樱花特效
+   [[params.customJS]]
+     src = &amp;quot;js/cherryblossom.js&amp;quot;
+  
+
+  # 分享操作
+  # Sharing options
+  # Comment and uncomment to enable or disable sharing options
+  # If you wanna add a sharing option, read user documentation :
+  # Tranquilpeak configuration &amp;gt; Theme configuration &amp;gt; sharing-options
+  #[[params.sharingOptions]]
+  #  name = &amp;quot;Facebook&amp;quot;
+  #  icon = &amp;quot;fa-facebook-official&amp;quot;
+  #  url = &amp;quot;https://www.facebook.com/sharer/sharer.php?u=%s&amp;quot;
+
+  #[[params.sharingOptions]]
+  #  name = &amp;quot;Twitter&amp;quot;
+  #  icon = &amp;quot;fa-twitter&amp;quot;
+  #  url = &amp;quot;https://twitter.com/intent/tweet?text=%s&amp;quot;
+
+  #[[params.sharingOptions]]
+  #  name = &amp;quot;Google+&amp;quot;
+  #  icon = &amp;quot;fa-google-plus&amp;quot;
+  #  url = &amp;quot;https://plus.google.com/share?url=%s&amp;quot;
+
+  # 点击about时候的行为，展示个人信息，不用改，默认就行
+  [params.header.rightLink]
+    class = &amp;quot;&amp;quot;
+    icon = &amp;quot;&amp;quot;
+    url = &amp;quot;/#about&amp;quot;
+
+  # 如果添加了valine的评论系统，就需要加上这一段代码，否则不用管；
+  # 占位符在后边会讲到怎么填
+   [params.valine]
+    enable = true
+    appId = &#39;xxxxxxx&#39;
+    appKey = &#39;xxxxxxxx&#39;
+    notify = false
+    vertify = false
+    avatar = &#39;mp&#39;
+    placeholder = &#39;说点什么吧&#39;
+    visitor = true
+
+  # Customize link of author avatar in sidebar
+  # [params.sidebar.profile]
+  #   url = &amp;quot;/#about&amp;quot;
+
+  # Customize copyright value &amp;quot;© 2017 &amp;lt;CUSTOMIZATION&amp;gt;. All Rights Reserved&amp;quot;
+  # [params.footer]
+  #   copyright = &amp;quot;&amp;lt;a href=\&amp;quot;https://github.com/kakawait\&amp;quot;&amp;gt;kakawait&amp;lt;/a&amp;gt;&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在主题配置中加入自定义的js插件以后，添加的点击爱心特效插件的代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function(window,document,undefined){
+    var hearts = [];
+    
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame || 
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+         window.oRequestAnimationFrame ||
+         window.msRequestAnimationFrame ||
+         function (callback){
+             setTimeout(callback,1000/60);
+         }
+    })();
+    
+    init();
+ 
+    function init(){
+        css(&amp;quot;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}&amp;quot;);
+        attachEvent();
+        gameloop();
+    }
+ 
+    function gameloop(){
+        for(var i=0;i&amp;lt;hearts.length;i++){
+            if(hearts[i].alpha &amp;lt;=0){
+                document.body.removeChild(hearts[i].el);
+                hearts.splice(i,1);
+                continue;
+             }
+ 
+             hearts[i].y--;
+             hearts[i].scale += 0.004;
+             hearts[i].alpha -= 0.013;
+             hearts[i].el.style.cssText = &amp;quot;left:&amp;quot;+hearts[i].x+&amp;quot;px;top:&amp;quot;+hearts[i].y+&amp;quot;px;opacity:&amp;quot;+hearts[i].alpha+&amp;quot;;transform:scale(&amp;quot;+hearts[i].scale+&amp;quot;,&amp;quot;+hearts[i].scale+&amp;quot;) rotate(45deg);background:&amp;quot;+hearts[i].color;
+        }
+ 
+        requestAnimationFrame(gameloop);
+    }
+ 
+    function attachEvent(){
+        var old = typeof window.onclick===&amp;quot;function&amp;quot; &amp;amp;&amp;amp; window.onclick;
+        window.onclick = function(event){
+            old &amp;amp;&amp;amp; old();
+            createHeart(event);
+        }
+    }
+ 
+    function createHeart(event){
+        var d = document.createElement(&amp;quot;div&amp;quot;);
+        d.className = &amp;quot;heart&amp;quot;;
+        hearts.push({
+            el : d,
+            x : event.clientX - 5,
+            y : event.clientY - 5,
+            scale : 1,
+            alpha : 1,
+            color : randomColor()
+        });
+ 
+        document.body.appendChild(d);
+    }
+ 
+    function css(css){
+        var style = document.createElement(&amp;quot;style&amp;quot;);
+        style.type=&amp;quot;text/css&amp;quot;;
+        try{
+            style.appendChild(document.createTextNode(css));
+        }
+        catch(ex){
+            style.styleSheet.cssText = css;
+        }
+ 
+        document.getElementsByTagName(&#39;head&#39;)[0].appendChild(style);
+    }
+ 
+    function randomColor(){
+        return &amp;quot;rgb(&amp;quot;+(~~(Math.random()*255))+&amp;quot;,&amp;quot;+(~~(Math.random()*255))+&amp;quot;,&amp;quot;+(~~(Math.random()*255))+&amp;quot;)&amp;quot;;
+    }
+    
+})(window,document);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;樱花的插件代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var stop, staticx;
+var img = new Image();
+img.src = &amp;quot;https://gitee.com/SAquarius/PICGO/raw/master/img/cherry.png&amp;quot;;
+function Sakura(x, y, s, r, fn) {
+  this.x = x;
+  this.y = y;
+  this.s = s;
+  this.r = r;
+  this.fn = fn;
+}
+Sakura.prototype.draw = function (cxt) {
+  cxt.save();
+  var xc = (30 * this.s) / 4;
+  cxt.translate(this.x, this.y);
+  cxt.rotate(this.r);
+  cxt.drawImage(img, 0, 0, 25 * this.s, 25 * this.s);
+  cxt.restore();
+};
+Sakura.prototype.update = function () {
+  this.x = this.fn.x(this.x, this.y);
+  this.y = this.fn.y(this.y, this.y);
+  this.r = this.fn.r(this.r);
+  if (
+    this.x &amp;gt; window.innerWidth ||
+    this.x &amp;lt; 0 ||
+    this.y &amp;gt; window.innerHeight ||
+    this.y &amp;lt; 0
+  ) {
+    this.r = getRandom(&amp;quot;fnr&amp;quot;);
+    if (Math.random() &amp;gt; 0.4) {
+      this.x = getRandom(&amp;quot;x&amp;quot;);
+      this.y = 0;
+      this.s = getRandom(&amp;quot;s&amp;quot;);
+      this.r = getRandom(&amp;quot;r&amp;quot;);
+    } else {
+      this.x = window.innerWidth;
+      this.y = getRandom(&amp;quot;y&amp;quot;);
+      this.s = getRandom(&amp;quot;s&amp;quot;);
+      this.r = getRandom(&amp;quot;r&amp;quot;);
+    }
+  }
+};
+SakuraList = function () {
+  this.list = [];
+};
+SakuraList.prototype.push = function (sakura) {
+  this.list.push(sakura);
+};
+SakuraList.prototype.update = function () {
+  for (var i = 0, len = this.list.length; i &amp;lt; len; i++) {
+    this.list[i].update();
+  }
+};
+SakuraList.prototype.draw = function (cxt) {
+  for (var i = 0, len = this.list.length; i &amp;lt; len; i++) {
+    this.list[i].draw(cxt);
+  }
+};
+SakuraList.prototype.get = function (i) {
+  return this.list[i];
+};
+SakuraList.prototype.size = function () {
+  return this.list.length;
+};
+function getRandom(option) {
+  var ret, random;
+  switch (option) {
+    case &amp;quot;x&amp;quot;:
+      ret = Math.random() * window.innerWidth;
+      break;
+    case &amp;quot;y&amp;quot;:
+      ret = Math.random() * window.innerHeight;
+      break;
+    case &amp;quot;s&amp;quot;:
+      ret = Math.random();
+      break;
+    case &amp;quot;r&amp;quot;:
+      ret = Math.random() * 6;
+      break;
+    case &amp;quot;fnx&amp;quot;:
+      random = -0.5 + Math.random() * 1;
+      ret = function (x, y) {
+        return x + 0.2 * random - 1.7;
+      };
+      break;
+    case &amp;quot;fny&amp;quot;:
+      random = 1.5 + Math.random() * 0.7;
+      ret = function (x, y) {
+        return y + random;
+      };
+      break;
+    case &amp;quot;fnr&amp;quot;:
+      random = Math.random() * 0.03;
+      ret = function (r) {
+        return r + random;
+      };
+      break;
+  }
+  return ret;
+}
+function startSakura() {
+  requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    window.oRequestAnimationFrame;
+  var canvas = document.createElement(&amp;quot;canvas&amp;quot;),
+    cxt;
+  staticx = true;
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.setAttribute(
+    &amp;quot;style&amp;quot;,
+    &amp;quot;position: fixed;left: 0;top: 0;pointer-events: none;&amp;quot;
+  );
+  canvas.setAttribute(&amp;quot;id&amp;quot;, &amp;quot;canvas_sakura&amp;quot;);
+  document.getElementsByTagName(&amp;quot;body&amp;quot;)[0].appendChild(canvas);
+  cxt = canvas.getContext(&amp;quot;2d&amp;quot;);
+  var sakuraList = new SakuraList();
+  for (var i = 0; i &amp;lt; 25; i++) {
+    var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
+    randomX = getRandom(&amp;quot;x&amp;quot;);
+    randomY = getRandom(&amp;quot;y&amp;quot;);
+    randomR = getRandom(&amp;quot;r&amp;quot;);
+    randomS = getRandom(&amp;quot;s&amp;quot;);
+    randomFnx = getRandom(&amp;quot;fnx&amp;quot;);
+    randomFny = getRandom(&amp;quot;fny&amp;quot;);
+    randomFnR = getRandom(&amp;quot;fnr&amp;quot;);
+    sakura = new Sakura(randomX, randomY, randomS, randomR, {
+      x: randomFnx,
+      y: randomFny,
+      r: randomFnR,
+    });
+    sakura.draw(cxt);
+    sakuraList.push(sakura);
+  }
+  stop = requestAnimationFrame(function () {
+    cxt.clearRect(0, 0, canvas.width, canvas.height);
+    sakuraList.update();
+    sakuraList.draw(cxt);
+    stop = requestAnimationFrame(arguments.callee);
+  });
+}
+window.onresize = function () {
+  var canvasSnow = document.getElementById(&amp;quot;canvas_snow&amp;quot;);
+};
+img.onload = function () {
+  startSakura();
+};
+function stopp() {
+  if (staticx) {
+    var child = document.getElementById(&amp;quot;canvas_sakura&amp;quot;);
+    child.parentNode.removeChild(child);
+    window.cancelAnimationFrame(stop);
+    staticx = false;
+  } else {
+    startSakura();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;设置文章模板&#34;&gt;设置文章模板&lt;/h2&gt;
+&lt;p&gt;为了更好的使用附加功能，比如封面和缩略图，我们提前修改一下模板。这样，每次使用新建一篇文档时候就省去很多麻烦事。
+使用MarkDown编辑工具打开themes/tranquilpeak/archetypes中的post.md直接替换为以下的模板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;{{ replace .TranslationBaseName &amp;quot;-&amp;quot; &amp;quot; &amp;quot; | title }}&amp;quot;
+date: {{ .Date }}
+categories:
+- category
+- subcategory
+tags:
+- tag1
+- tag2
+keywords:
+- tech
+# 每次编辑文档时请删去这些解释的注释
+# 缩略图，最好采用宽度为750的图片，可以使用本地文件或者使用git图床
+# 使用本地图库，请把图片存在themes/static/images文件夹下，并且用下面的路径引用
+thumbnailImage: /images/cover.jpg
+# 缩略图位置，我觉得放在上面好看，如果用的小图片作缩略图
+# 可以放在（left或者right），设置此项会取代配置文件中默认在下边的设置
+thumbnailImagePosition: top
+# 这个下边默认就好了，暂时不清楚有什么影响
+autoThumbnailImage: yes
+metaAlignment: center
+# 封面图片，如果选用本地文件的话，和缩略图同样的路径，21：9的图片效果很好看
+coverImage: /images/cover.jpg
+# 封面图片的描述引号中的文字可以自己选
+coverCaption: &amp;quot;文章cover图片描述&amp;quot;
+# in表示文章标题显示在封面图片上，out表示显示在封面图片的外边，也就是文章开头
+coverMeta: in
+# 封面图片的覆盖大小，直接默认为full吧，21:9的图片这样设置显示效果真的不错
+coverSize: full
+---
+#缩略显示的梗概，这里把注释删去，写成文章的简介或者梗概，在首页时候可以只显示梗概
+&amp;lt;!--more--&amp;gt;
+&amp;lt;!-- toc --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;创建文章&#34;&gt;创建文章&lt;/h2&gt;
+&lt;p&gt;接下来在根目录下使用以下命令生成一篇文档吧。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; hugo new post/first.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;待本地启动后，可以继续修改这篇文档的内容，在需要的文件夹中加入需要的图片，然后调整相关的参数，看看图片的几个功能是否正常或者符合预期。
+更多的配置参数可以阅读 &lt;a href=&#34;https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md&#34;&gt;tranquilpeak主题的使用文档&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;启动博客的本地预览&#34;&gt;启动博客的本地预览&lt;/h2&gt;
+&lt;p&gt;在你的站点根目录执行 Hugo 命令进行调试：（--theme=主题名）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo server --theme=tranquilpeak --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（注明：v0.15 版本之后，不再需要使用 --watch 参数了）&lt;/p&gt;
+&lt;p&gt;浏览器里打开： http://localhost:1313&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;添加评论功能valine&#34;&gt;添加评论功能valine&lt;/h2&gt;
+&lt;p&gt;修改主题文件的步骤上有所不同，这个主题中只需要修改themes/tranquilpeak/layouts/_default/single.html文件，将以下代码插入到第36行后的位置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{- if .Site.Params.valine.enable -}}
+              &amp;lt;!-- id 将作为查询条件 --&amp;gt;
+              &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
+                &amp;lt;span class=&amp;quot;post-meta-item-text&amp;quot;&amp;gt;文章阅读量 &amp;lt;/span&amp;gt;
+                &amp;lt;span class=&amp;quot;leancloud-visitors-count&amp;quot;&amp;gt;1000000&amp;lt;/span&amp;gt;
+                &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+              &amp;lt;/span&amp;gt;
+              &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+              &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+              &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+              &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+                new Valine({
+                  el: &#39;#vcomments&#39; ,
+                  appId: &#39;{{ .Site.Params.valine.appId }}&#39;,
+                  appKey: &#39;{{ .Site.Params.valine.appKey }}&#39;,
+                  notify: &#39;{{ .Site.Params.valine.notify }}&#39;,
+                  verify: &#39;{{ .Site.Params.valine.verify }}&#39;,
+                  avatar:&#39;{{ .Site.Params.valine.avatar }}&#39;, 
+                  placeholder: &#39;{{ .Site.Params.valine.placeholder }}&#39;,
+                  visitor: &#39;{{ .Site.Params.valine.visitor }}&#39;
+                });
+              &amp;lt;/script&amp;gt;
+              {{- end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这样，如果leancloud审核通过建立了应用的话，评论系统就可以使用了。
+但是评论功能有缺陷，需要Valine Admin完善一下 。
+Valine Admin 是 &lt;a href=&#34;https://deserts.io/diy-a-comment-system/&#34;&gt;Valine 评论系统&lt;/a&gt;的后端功能补充和增强，主要实现评论邮件通知、评论管理、垃圾评论过滤等功能。支持完全自定义的邮件通知模板，基于Akismet API实现准确的垃圾评论过滤。参考教程 &lt;a href=&#34;https://deserts.io/valine-admin-document/&#34;&gt;https://deserts.io/valine-admin-document/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/2021-06-10/23771092-de433d4f19d889bf.png&#34; alt=&#34;图片.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;最后部署&#34;&gt;最后：部署&lt;/h2&gt;
+&lt;p&gt;假设你需要部署在 GitHub Pages 上，首先在GitHub上创建一个Repository，命名为：codeplayer.github.io （codeplayer-zzy.github.io替换为你的github用户名）。&lt;br&gt;
+在站点根目录执行 Hugo 命令生成最终页面：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo --theme=主题名 --baseUrl=&amp;quot;http://codeplayer-zzy.github.io/&amp;quot; --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成。）&lt;/p&gt;
+&lt;p&gt;如果一切顺利，所有静态页面都会生成到 public 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt; #进入目录
+cd public 
+ #初始化
+git init 
+#链接到远端，把XXX替换成自己的内容，不要忘了还有后缀.git
+git remote add origin https://github.com/xxx/xxx.github.io.git
+#添加public中的所有文件
+git add .
+#提交描述，&amp;quot;first commit&amp;quot; 中是你这次提交的描述，可以随便写
+git commit -m &amp;quot;first commit&amp;quot;
+#git 推到远程仓库
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;浏览器里访问：http://xxx.github.io/（ github 仓库地址）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;后续更新内容&#34;&gt;后续更新内容&lt;/h2&gt;
+&lt;p&gt;后续再写文章的时候，直接在站点根目录下新建一篇文档就行了（如果像前边介绍的配置了生成模板的话会很方便使用的）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new post/XXXXX.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果对配置不做大的改动（例如：更换主题等），后续的push过程很简单的啦，只有下面几个了(根目录下使用命令)：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd public
+git add .
+git commit -m &amp;quot;XXXXXXX&amp;quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;到这里就结束啦，是不是很简单呢，预祝大家很快就有自己的个人博客。鼓掌！&lt;br&gt;
+（有了个人博客大家也要积极写博客哦）
+本文参考：&lt;a href=&#34;http://blog.songjiahao.com/&#34;&gt;SAquarius的博客&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gohugo.org/&#34;&gt;Hugo官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.songjiahao.com/&#34;&gt;SAquarius的博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;进一步配置&#34;&gt;进一步配置&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#define-date-format&#34;&gt;tranquilpeak主题配置说明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/billie52707/&#34;&gt;人人都爱小雀斑&#39;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://deserts.io/valine-admin-document/&#34;&gt;Valine Admin 配置手册&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/" term="功能实现" label="功能实现" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/hugo/" term="hugo" label="hugo" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/github/" term="github" label="github" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">授权和认证科普</title>
+            <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/posts/%E6%8E%88%E6%9D%83%E5%92%8C%E8%AE%A4%E8%AF%81%E7%A7%91%E6%99%AE/" />
+            <id>https://codeplayer-zzy.github.io/posts/%E6%8E%88%E6%9D%83%E5%92%8C%E8%AE%A4%E8%AF%81%E7%A7%91%E6%99%AE/</id>
+            <updated>2021-06-12T13:24:47&#43;08:00</updated>
+            <published>2021-06-10T09:22:15&#43;08:00</published>
+            <author>
+                    <name>codeplayer</name>
+                    <uri>https://codeplayer-zzy.github.io/</uri>
+                    <email>2775152443@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;网站登录的几种方式，科普篇&lt;/p&gt;……</summary>
+            
+                <content type="html">&lt;p&gt;网站登录的几种方式，科普篇&lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大家好。
+做项目时必不可少的一部就是实现登录功能，对于第一次做项目的同学来说要实现登录也是不小的困难，今天笔者做了一个登录功能的科普。笔者知识有限，如有不妥，望各位小伙伴不吝赐教！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;登录功能离不开用户认证&#34;&gt;登录功能离不开用户认证&lt;/h4&gt;
+&lt;p&gt;一般流程是下面这样：&lt;/p&gt;
+&lt;p&gt;很多时候我们都是通过 SessionID 来实现特定的用户，SessionID 一般会选择存放在 Redis 中。
+举个例子：用户成功登陆系统，然后返回给客户端具有 SessionID 的 Cookie，当用户向后端发起请求的时候会把 SessionID 带上，这样后端就知道你的身份状态了。&lt;/p&gt;
+&lt;p&gt;关于这种认证方式更详细的过程如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/2021-06-10/23771092-46876e9458e639d8.png&#34; alt=&#34;图片.png&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用户向服务器发送用户名和密码用于登陆系统。&lt;/li&gt;
+&lt;li&gt;服务器验证通过后，服务器为用户创建一个 Session，并将 Session信息存储起来。&lt;/li&gt;
+&lt;li&gt;服务器向用户返回一个 SessionID，写入用户的 Cookie。&lt;/li&gt;
+&lt;li&gt;当用户保持登录状态时，Cookie 将与每个后续请求一起被发送出去。&lt;/li&gt;
+&lt;li&gt;服务器可以将存储在 Cookie 上的 Session ID 与存储在内存中或者数据库中的 Session 信息进行比较，以验证用户的身份，返回给用户客户端响应信息的时候会附带用户当前的状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;首先你要理解 Cookie、Session、Token&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;推荐阅读：Java Guide哥的这篇文章 &lt;a href=&#34;https://github.com/zhangzuyi/JavaGuide/blob/master/docs/system-design/authority-certification/basis-of-authority-certification.md&#34;&gt;https://github.com/zhangzuyi/JavaGuide/blob/master/docs/system-design/authority-certification/basis-of-authority-certification.md&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;认证-authentication-和授权-authorization的区别是什么&#34;&gt;认证 (Authentication) 和授权 (Authorization)的区别是什么？&lt;/h4&gt;
+&lt;p&gt;首先建议区分先它们的模样，然后去查查它们的读音，读个几遍。&lt;/p&gt;
+&lt;p&gt;简单解释就是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;认证(Authentication)&lt;/strong&gt;：查看你的身份的；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比如：每次在不同客户端登录微信时都要输入账号密码，即认证的过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;授权(Authorization)&lt;/strong&gt;：查看你的身份是否有权限的；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比如：QQ会员用户与普通用户就拥有不同的权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;http是一个无状态协议&#34;&gt;http是一个无状态协议&lt;/h4&gt;
+&lt;p&gt;什么是无状态呢？就是说这第一次请求和第二次请求是没有任何关系的，互不认识的，没有关联的。这种无状态的的好处是快速。
+坏处是假如我们想要把www.zhihu.com/login.html和www.zhihu.com/index.html关联起来，必须使用某些手段和工具，比如：Cookie，Session，Token。&lt;/p&gt;
+&lt;h4 id=&#34;什么是cookie--cookie的作用是什么如何在服务端使用-cookie-&#34;&gt;什么是Cookie ? Cookie的作用是什么?如何在服务端使用 Cookie ?&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cookie是由W3C组织提出，最早由netscape社区发展的一种机制&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;网页之间的**交互是通过HTTP协议传输数据的，&lt;strong&gt;而Http协议是&lt;/strong&gt;无状态的协议。**无状态的协议是什么意思呢？&lt;strong&gt;一旦数据提交完后，浏览器和服务器的连接就会关闭，再次交互的时候需要重新建立新的连接。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;服务器无法确认用户的信息，于是乎，W3C就提出了：&lt;strong&gt;服务端给每一个用户都发一个通行证，无论谁访问的时候都需要携带通行证，这样服务器就可以从通行证上确认用户的信息。通行证就是Cookie&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单说：&lt;strong&gt;Cookie 存放在客户端，一般用来保存用户信息。&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cookie的作用&#34;&gt;Cookie的作用：&lt;/h5&gt;
+&lt;p&gt;下面是 Cookie 的一些应用案例：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我们在 Cookie 中保存已经登录过的用户信息，下次访问网站的时候页面可以自动帮你登录的一些基本信息给填了。除此之外，Cookie 还能保存用户首选项，主题和其他设置信息。&lt;/li&gt;
+&lt;li&gt;使用Cookie 保存 session 或者 token ，向后端发送请求的时候带上 Cookie，这样后端就能取到session或者token了。这样就能记录用户当前的状态了，因为 HTTP 协议是无状态的。&lt;/li&gt;
+&lt;li&gt;Cookie 还可以用来记录和分析用户行为。举个简单的例子你在网上购物的时候，因为HTTP协议是没有状态的，如果服务器想要获取你在某个页面的停留状态或者看了哪些商品，一种常用的实现方式就是将这些信息存放在Cookie。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;如何在服务端使用-cookie-呢&#34;&gt;如何在服务端使用 Cookie 呢？&lt;/h5&gt;
+&lt;p&gt;Cookie API&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookie类用于创建一个Cookie对象&lt;/li&gt;
+&lt;li&gt;response接口中定义了一个addCookie方法，它用于在其响应头中增加一个相应的Set-Cookie头字段&lt;/li&gt;
+&lt;li&gt;request接口中定义了一个getCookies方法，它用于获取客户端提交的Cookie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用的Cookie方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;public Cookie(String name,String value)&lt;/li&gt;
+&lt;li&gt;setValue与getValue方法&lt;/li&gt;
+&lt;li&gt;setMaxAge与getMaxAge方法&lt;/li&gt;
+&lt;li&gt;setPath与getPath方法&lt;/li&gt;
+&lt;li&gt;setDomain与getDomain方法&lt;/li&gt;
+&lt;li&gt;getName方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;cookie不可跨域名性&#34;&gt;Cookie不可跨域名性&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookie具有不可跨域名性。浏览器判断一个网站是否能操作另一个网站的Cookie的依据是域名。所以一般来说，当我访问百度的时候，浏览器只会把百度颁发的Cookie带过去，而不会带上google的Cookie。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;8-什么是session&#34;&gt;8. 什么是Session？&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Session 是另一种记录浏览器状态的机制。不同的是Cookie保存在浏览器中，Session保存在&lt;strong&gt;服务器中&lt;/strong&gt;。用户使用浏览器访问服务器的时候，服务器把用户的信息以某种的形式记录在服务器，这就是Session。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Session比Cookie使用方便，Session可以解决Cookie解决不了的事情。&lt;/li&gt;
+&lt;li&gt;比如：【Session可以存储对象，Cookie只能存储字符串。】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;cookie-和-session-有什么区别&#34;&gt;Cookie 和 Session 有什么区别？&lt;/h4&gt;
+&lt;p&gt;Session &lt;strong&gt;的主要作用就是通过服务端记录用户的状态。&lt;/strong&gt; 典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的 Session 之后就可以标识这个用户并且跟踪这个用户了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cookie 数据保存在客户端(浏览器端)，Session 数据保存在服务器端。相对来说 Session 安全性更高。如果使用 Cookie 的一些敏感信息不要写入 Cookie 中，最好能将 Cookie 信息加密然后使用到的时候再去服务器端解密&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用 Session 的时候需要注意下面几个点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;依赖Session的关键业务一定要确保客户端开启了Cookie。&lt;/li&gt;
+&lt;li&gt;注意Session的过期时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;如果没有Cookie的话Session还能用吗？&lt;/strong&gt;
+这是一道经典的面试题！
+一般是通过 Cookie 来保存 SessionID ，假如你使用了 Cookie 保存 SessionID的方案的话， 如果客户端禁用了Cookie，那么Seesion就无法正常工作。
+但是，并不是没有 Cookie 之后就不能用 Session 了，比如你可以将SessionID放在请求的 url 里面https://javaguide.cn/?session_id=xxx 。
+这种方案的话可行，但是安全性和用户体验感降低。当然，为了你也可以对 SessionID 进行一次加密之后再传入后端。&lt;/p&gt;
+&lt;h4 id=&#34;为什么cookie-无法防止csrf攻击而token可以&#34;&gt;为什么Cookie 无法防止CSRF攻击，而token可以？&lt;/h4&gt;
+&lt;p&gt;**CSRF（Cross Site Request Forgery）**一般被翻译为 跨站请求伪造 。那么什么是 跨站请求伪造 呢？说简单用你的身份去发送一些对你不友好的请求。举个简单的例子：
+小壮登录了某网上银行，他来到了网上银行的帖子区，看到一个帖子下面有一个链接写着“科学理财，年盈利率过万”，小壮好奇的点开了这个链接，结果发现自己的账户少了10000元。这是这么回事呢？原来黑客在链接中藏了一个请求，这个请求直接利用小壮的身份给银行发送了一个转账请求,也就是通过你的 Cookie 向银行发出请求。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a src=http://www.mybank.com/Transfer?bankId=11&amp;amp;money=10000&amp;gt;科学理财，年盈利率过万&amp;lt;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面也提到过，进行Session 认证的时候，我们一般使用 Cookie 来存储 SessionId,当我们登陆后后端生成一个SessionId放在Cookie中返回给客户端，服务端通过Redis或者其他存储工具记录保存着这个Sessionid，客户端登录以后每次请求都会带上这个SessionId，服务端通过这个SessionId来标示你这个人。如果别人通过 cookie拿到了 SessionId 后就可以代替你的身份访问系统了。&lt;/p&gt;
+&lt;p&gt;Session 认证中 Cookie 中的 SessionId是由浏览器发送到服务端的，借助这个特性，攻击者就可以通过让用户误点攻击链接，达到攻击效果。&lt;/p&gt;
+&lt;p&gt;但是，我们使用 token 的话就不会存在这个问题，在我们登录成功获得 token 之后，一般会选择存放在 local storage 中。然后我们在前端通过某些方式会给每个发到后端的请求加上这个 token,这样就不会出现 CSRF 漏洞的问题。因为，即使有个你点击了非法链接发送了请求到服务端，这个非法请求是不会携带 token 的，所以这个请求将是非法的。&lt;/p&gt;
+&lt;p&gt;需要注意的是不论是 Cookie 还是 token 都无法避免跨站脚本攻击（Cross Site Scripting）XSS。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;跨站脚本攻击（Cross Site Scripting）缩写为 CSS 但这会与层叠样式表（Cascading Style Sheets，CSS）的缩写混淆。因此，有人将跨站脚本攻击缩写为XSS。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;XSS中攻击者会用各种方式将恶意代码注入到其他用户的页面中。就可以通过脚本盗用信息比如cookie。&lt;/p&gt;
+&lt;h4 id=&#34;什么是-token什么是-jwt如何基于token进行身份验证&#34;&gt;什么是 Token?什么是 JWT?如何基于Token进行身份验证？&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;建议先阅读：&lt;/strong&gt;
+廖雪峰的JSON Web Token 入门教程：
+&lt;a href=&#34;https://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html&#34;&gt;https://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我们在上一个问题中探讨了使用 Session 来鉴别用户的身份，并且给出了几个 Spring Session 的案例分享。 我们知道 Session 信息需要保存一份在服务器端。这种方式会带来一些麻烦，比如需要我们保证保存 Session 信息服务器的可用性、不适合移动端（依赖Cookie）等等。&lt;/p&gt;
+&lt;p&gt;有没有一种不需要自己存放 Session 信息就能实现身份验证的方式呢？使用 Token 即可！JWT （JSON Web Token） 就是这种&lt;strong&gt;方式的实现&lt;/strong&gt;，通过这种方式服务器端就不需要保存 Session 数据了，只用在客户端保存服务端返回给客户的 Token 就可以了，扩展性得到提升。&lt;/p&gt;
+&lt;p&gt;JWT 本质上就一段签名的 JSON 格式的数据。由于它是带有签名的，因此接收者便可以验证它的真实性。&lt;/p&gt;
+&lt;p&gt;JWT 由 3 部分构成:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Header :描述 JWT 的元数据。定义了生成签名的算法以及 Token 的类型；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payload（负载）:用来存放实际需要传递的数据；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Signature（签名）：服务器通过Payload、Header和一个密钥(secret)使用 Header 里面指定的签名算法（默认是 HMAC SHA256）生成。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在基于 Token 进行身份验证的的应用程序中，服务器通过Payload、Header和一个密钥(secret)创建令牌（Token）并将 Token 发送给客户端，客户端将 Token 保存在 Cookie 或者 localStorage 里面，以后客户端发出的所有请求都会携带这个令牌。你可以把它放在 Cookie 里面自动发送，但是这样不能跨域，所以更好的做法是放在 HTTP Header 的 Authorization字段中： Authorization: Bearer Token。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/2021-06-10/23771092-171b3150e7f7634c.png&#34; alt=&#34;图片.png&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用户向服务器发送用户名和密码用于登陆系统。&lt;/li&gt;
+&lt;li&gt;身份验证服务响应并返回了签名的 JWT，上面包含了用户是谁的内容。&lt;/li&gt;
+&lt;li&gt;用户以后每次向后端发请求都在Header中带上 JWT。&lt;/li&gt;
+&lt;li&gt;服务端检查 JWT 并从中获取用户相关信息。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;什么是oauth-20&#34;&gt;什么是OAuth 2.0？&lt;/h4&gt;
+&lt;p&gt;推荐阅读：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html&#34;&gt;http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://oauth.net/2/&#34;&gt;https://oauth.net/2/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OAuth2.0是OAuth协议的延续版本，但不向前兼容OAuth 1.0(即完全废止了OAuth1.0)。 OAuth 2.0关注客户端开发者的简易性。要么通过组织在资源拥有者和HTTP服务商之间的被批准的交互动作代表用户，要么允许第三方应用代表用户获得访问的权限。同时为Web应用，桌面应用和手机，和起居室设备提供专门的认证流程。（百度的结果）&lt;/p&gt;
+&lt;p&gt;实际上OAuth 2.0 是目前最流行的授权机制，用来授权第三方应用，获取用户数据。一般用于第三方登录，当你的网站接入了第三方登录的时候一般就是使用的 OAuth 2.0 协议。&lt;/p&gt;
+&lt;h4 id=&#34;什么是-sso&#34;&gt;什么是 SSO?&lt;/h4&gt;
+&lt;p&gt;SSO(Single Sign On)即单点登录说的是用户登陆多个子系统的其中一个就有权访问与其相关的其他系统。举个例子我们在登陆了京东金融之后，我们同时也成功登陆京东的京东超市、京东家电等子系统。&lt;/p&gt;
+&lt;h4 id=&#34;sso与oauth20的区别&#34;&gt;SSO与OAuth2.0的区别&lt;/h4&gt;
+&lt;p&gt;OAuth 是一个行业的标准授权协议，主要用来授权第三方应用获取有限的权限。SSO解决的是一个公司的多个相关的自系统的之间的登陆问题比如京东旗下相关子系统京东金融、京东超市、京东家电等等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zhangzuyi/JavaGuide/blob/master/docs/system-design/authority-certification/basis-of-authority-certification.md&#34;&gt;https://github.com/zhangzuyi/JavaGuide/blob/master/docs/system-design/authority-certification/basis-of-authority-certification.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000017831088&#34;&gt;https://segmentfault.com/a/1190000017831088&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;amp;mid=2247484755&amp;amp;idx=6&amp;amp;sn=3a370551b0ee800f3bcad8ff37a72b9d&amp;amp;chksm=ebd74452dca0cd44f454ca8aa006d352c6994bb7ea955b5ca5f2ec2b227792010939bfa25532##rd&#34;&gt;https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;amp;mid=2247484755&amp;amp;idx=6&amp;amp;sn=3a370551b0ee800f3bcad8ff37a72b9d&amp;amp;chksm=ebd74452dca0cd44f454ca8aa006d352c6994bb7ea955b5ca5f2ec2b227792010939bfa25532##rd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/categories/%E7%A7%91%E6%99%AE/" term="科普" label="科普" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/%E6%8E%88%E6%9D%83%E5%92%8C%E8%AE%A4%E8%AF%81/" term="授权和认证" label="授权和认证" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/authentication/" term="Authentication" label="Authentication" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/authorization/" term="Authorization" label="Authorization" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Kaptcha</title>
+            <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/posts/kaptcha/" />
+            <id>https://codeplayer-zzy.github.io/posts/kaptcha/</id>
+            <updated>2021-06-11T12:56:01&#43;08:00</updated>
+            <published>2021-06-09T22:29:10&#43;08:00</published>
+            <author>
+                    <name>codeplayer</name>
+                    <uri>https://codeplayer-zzy.github.io/</uri>
+                    <email>2775152443@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;登录功能加入Kaptcha验证码工具实现&lt;/p&gt;……</summary>
+            
+                <content type="html">&lt;p&gt;登录功能加入Kaptcha验证码工具实现&lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;各位小伙伴，大家好啊！
+登录功能最好能有验证码功能，一般实现验证码我们都是借用工具包完成，今天我们就来使用一款学习方便，使用简单验证码工具包kapatcha，开始：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;kaptcha-简介&#34;&gt;Kaptcha 简介&lt;/h4&gt;
+&lt;p&gt;Kaptcha 是一个可高度配置的实用验证码生成工具，可自由配置的选项如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;验证码的字体&lt;/li&gt;
+&lt;li&gt;验证码字体的大小&lt;/li&gt;
+&lt;li&gt;验证码字体的字体颜色&lt;/li&gt;
+&lt;li&gt;验证码内容的范围(数字，字母，中文汉字！)&lt;/li&gt;
+&lt;li&gt;验证码图片的大小，边框，边框粗细，边框颜色&lt;/li&gt;
+&lt;li&gt;验证码的干扰线&lt;/li&gt;
+&lt;li&gt;验证码的样式(鱼眼样式、3D、普通模糊、...)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;开发工具及技术&#34;&gt;开发工具及技术:&lt;/h4&gt;
+&lt;p&gt;1、idea 2020.1
+2、springboot 2.4.4
+3、kaptcha 2.3.2&lt;/p&gt;
+&lt;p&gt;在pom.xml引入依赖:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-maven&#34; data-lang=&#34;maven&#34;&gt;        &amp;lt;!--验证码功能--&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;com.github.penggle&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;kaptcha&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;2.3.2&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置类CapthchaConfig.java：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.codeplayer.config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * 验证码配置
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; *
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * @author codeplayer
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@Configuration&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CaptchaCongfig&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@Bean&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;captchaProducer&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DefaultKaptcha&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getKaptchaBean&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;DefaultKaptcha&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;defaultKaptcha&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DefaultKaptcha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Properties&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 是否有边框 默认为true 我们可以自己设置yes，no
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_BORDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 验证码文本字符颜色 默认为Color.BLACK
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_TEXTPRODUCER_FONT_COLOR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 验证码图片宽度 默认为200
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_IMAGE_WIDTH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;147&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 验证码图片高度 默认为50
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_IMAGE_HEIGHT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;34&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 验证码文本字符大小 默认为40
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_TEXTPRODUCER_FONT_SIZE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;25&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// KAPTCHA_SESSION_KEY
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_SESSION_CONFIG_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Code&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 验证码文本字符长度 默认为5
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_TEXTPRODUCER_CHAR_LENGTH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 验证码文本字体样式 默认为new Font(&amp;#34;Arial&amp;#34;, 1, fontSize), new Font(&amp;#34;Courier&amp;#34;, 1, fontSize)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_TEXTPRODUCER_FONT_NAMES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Arial&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 图片样式 水纹com.google.code.kaptcha.impl.WaterRipple 鱼眼com.google.code.kaptcha.impl.FishEyeGimpy 阴影com.google.code.kaptcha.impl.ShadowGimpy
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KAPTCHA_OBSCURIFICATOR_IMPL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;com.google.code.kaptcha.impl.ShadowGimpy&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Config&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;defaultKaptcha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setConfig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;defaultKaptcha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;前端html:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-hmtl&#34; data-lang=&#34;hmtl&#34;&gt;&amp;lt;label&amp;gt;
+           &amp;lt;span&amp;gt;验证码&amp;lt;/span&amp;gt;
+           &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;validateCode&amp;quot; id=&amp;quot;validateCode&amp;quot; placeholder=&amp;quot;请点击验证码&amp;quot; onclick=&amp;quot;validate()&amp;quot;/&amp;gt;
+           &amp;lt;img onclick=&amp;quot;this.src=&#39;/kaptcha/kaptchaImage?d=&#39;+new Date().getTime()&amp;quot; width=&amp;quot;85%&amp;quot; id=&amp;quot;validate&amp;quot;/&amp;gt;
+&amp;lt;/label&amp;gt;
+
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+function validate() {
+        //触发 img
+        $(&amp;quot;#validate&amp;quot;).trigger(&#39;click&#39;);
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;控制类SysCaptchaController.java：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.codeplayer.controller&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * 图片验证码（支持算术形式）
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; *
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * @author codeplayer
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@Controller&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/kaptcha&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SysCaptchaController&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@Resource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;kaptchaProducer&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Producer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;captchaProducer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * 验证码生成
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@GetMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;/kaptchaImage&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getKaptchaImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;ServletOutputStream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;HttpSession&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setDateHeader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Expires&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setHeader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Cache-Control&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;no-store, no-cache, must-revalidate&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addHeader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Cache-Control&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;post-check=0, pre-check=0&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setHeader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Pragma&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;no-cache&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setContentType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;image/jpeg&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;//生成验证码
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;            &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;capText&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;captchaProducer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;createText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;session&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setAttribute&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Constants&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;KAPTCHA_SESSION_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;capText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;//向客户端写出
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;            &lt;span class=&#34;n&#34;&gt;BufferedImage&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;captchaProducer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;createImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;capText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;ImageIO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;jpg&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;flush&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+                &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+                &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IOException&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;验证码比对工具类CodeUtil.java:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.codeplayer.utils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;javax.servlet.http.HttpServletRequest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * Kaptcha工具类
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; *
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * @author codeplayer
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;KaptchaUtil&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * 将获取到的前端参数转为string类型
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * @param request
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * @param key
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * @return String
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getParameter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * 验证码校验
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * @param request
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * @return boolean
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;checkVerifyCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;//获取生成的验证码
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;verifyCodeExpected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getAttribute&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;google&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;kaptcha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Constants&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;KAPTCHA_SESSION_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;//获取用户输入的验证码
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;validateCode&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;KaptchaUtil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;validateCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;validateCode&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;validateCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;equals&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;verifyCodeExpected&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;控制类SysLoginController.java:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * 管理员登录
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@ResponseBody&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;/login&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RequestMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;POST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KaptchaUtil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;checkVerifyCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;warn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;验证码错误！！&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;JSONObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toJSONString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;......&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;最后展示：&lt;/strong&gt;
+&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/2021-06-09/23771092-3ebdc39f42927c46.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;####结语：
+好了，这里就简单的使用&lt;strong&gt;Kaptcha&lt;/strong&gt;实现了验证码功能，更多功能实现，我们下期来见！！（友情提示：刚学习不懂的小伙伴，可以把代码复制自己跑跑，就理解了。）&lt;/p&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/" term="功能实现" label="功能实现" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/kaptcha/" term="Kaptcha" label="Kaptcha" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Ajax登录功能实现</title>
+            <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/posts/ajax/" />
+            <id>https://codeplayer-zzy.github.io/posts/ajax/</id>
+            <updated>2021-06-12T13:19:54&#43;08:00</updated>
+            <published>2021-06-09T21:45:51&#43;08:00</published>
+            <author>
+                    <name>codeplayer</name>
+                    <uri>https://codeplayer-zzy.github.io/</uri>
+                    <email>2775152443@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;使用Ajax技术网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面，这使得程序能够更快地回应用户的操作。&lt;/p&gt;……</summary>
+            
+                <content type="html">&lt;p&gt;使用Ajax技术网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面，这使得程序能够更快地回应用户的操作。&lt;/p&gt;
+&lt;h4 id=&#34;1-ajax是什么&#34;&gt;1. Ajax是什么？&lt;/h4&gt;
+&lt;p&gt;Ajax即Asynchronous Javascript And XML（异步JavaScript和XML）在 2005年被Jesse James Garrett提出的新术语，用来描述一种使用现有技术集合的‘新’方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例如：&lt;/strong&gt; HTML 或 XHTML, CSS, JavaScript, DOM, XML, XSLT, 以及最重要的XMLHttpRequest。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;作用：&lt;/strong&gt; 使用Ajax技术网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面，这使得程序能够更快地回应用户的操作。&lt;/p&gt;
+&lt;h4 id=&#34;2-ajax实现登录页面&#34;&gt;2. Ajax实现登录页面&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;login.html&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Login&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;nav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;用户名&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;codeplayer&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;placeholder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;请输入用户名&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;密码&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;123456&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;placeholder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;请输入密码&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;忘记密码？&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;button&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;submit&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onclick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;login()&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;登 录&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;nav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;username&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#username&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;//获取值;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#password&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;username&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+            &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;用户名和密码不能为空哦&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ajax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
+                &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;//请求方式;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;/login&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;//请求的地址为、login;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                &lt;span class=&#34;nx&#34;&gt;dataType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;json&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;//数据类型;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;//传递的数据;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                &lt;span class=&#34;nx&#34;&gt;success&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;//用回调函数接收传回来的值;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                        &lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/index&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;//跳转页面路径;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                        &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;failed!!!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;3-controller实现&#34;&gt;3. Controller实现&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;LoginController.java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Controller&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;LoginController&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Autowired&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoginMapper&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loginMapper&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Autowired&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Result&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@GetMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/login&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;login&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Logger&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoggerFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getLogger&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoginController&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@PostMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/login&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//POST请求
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@ResponseBody&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//返回JSON
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 获取管理员对象
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;user&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loginMapper&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;selectById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 进行判断
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;equals&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getPassword&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;equals&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)){&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setMessage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;success！！&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;warn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;登录成功！！&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setAttribute&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;404&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setMessage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;failed！！&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;warn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;【错误】密码登录，用户名或密码错误&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;//使用了fastjson
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;JSONObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toJSONString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;4-导入的包&#34;&gt;4. 导入的包&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Mysql驱动包 --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!--引入MyBatis支持--&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!--引入fastjson--&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;fastjson&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.2.62&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;5-结语&#34;&gt;5. 结语&lt;/h5&gt;
+&lt;p&gt;最近用到了做个笔记...&lt;/p&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/" term="功能实现" label="功能实现" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/ajax/" term="ajax" label="ajax" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Elasticsearch与SpringBoot整合实现搜索功能</title>
+            <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/posts/elasticsearch/" />
+            <id>https://codeplayer-zzy.github.io/posts/elasticsearch/</id>
+            <updated>2021-06-11T12:54:21&#43;08:00</updated>
+            <published>2021-06-09T20:29:47&#43;08:00</published>
+            <author>
+                    <name>codeplayer</name>
+                    <uri>https://codeplayer-zzy.github.io/</uri>
+                    <email>2775152443@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;每个网站都避免不了要有搜索功能，当前实现搜索功能最热门的就是Elasticsearch了。&lt;/p&gt;……</summary>
+            
+                <content type="html">&lt;p&gt;每个网站都避免不了要有搜索功能，当前实现搜索功能最热门的就是Elasticsearch了。&lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个网站都避免不了要有搜索功能，当前实现搜索功能最热门的就是Elasticsearch了。我们来学习一下！（阅读时间十分钟左右）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;elasticsearch-简介&#34;&gt;Elasticsearch 简介&lt;/h3&gt;
+&lt;p&gt;Elasticsearch 是一个分布式、可扩展、实时的搜索与数据分析引擎。 它能从项目一开始就赋予你的数据以搜索、分析和探索的能力，这是通常没有预料到的。 它存在还因为原始数据如果只是躺在磁盘里面根本就毫无用处。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们直接来看官网的介绍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;官网：&lt;a href=&#34;https://www.elastic.co/cn/elasticsearch/&#34;&gt;https://www.elastic.co/cn/elasticsearch/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-2f610c15bff2138a.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;另外还有一个关于 Elasticsearch 来源很有趣的故事在这里分享一下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;进入回忆空间
+许多年前，一个刚结婚的名叫 Shay Banon 的失业开发者，跟着他的妻子去了伦敦，他的妻子在那里学习厨师。 在寻找一个赚钱的工作的时候，为了给他的妻子做一个食谱搜索引擎，他开始使用 Lucene 的一个早期版本。直接使用 Lucene 是很难的，因此 Shay 开始做一个抽象层，Java 开发者使用它可以很简单的给他们的程序添加搜索功能。 他发布了他的第一个开源项目 Compass。后来 Shay 获得了一份工作，主要是高性能，分布式环境下的内存数据网格。这个对于高性能，实时，分布式搜索引擎的需求尤为突出， 他决定重写 Compass，把它变为一个独立的服务并取名 Elasticsearch。第一个公开版本在2010年2月发布，从此以后，Elasticsearch 已经成为了 Github 上最活跃的项目之一，他拥有超过300名 contributors(目前736名 contributors )。 一家公司已经开始围绕 Elasticsearch 提供商业服务，并开发新的特性，但是，Elasticsearch 将永远开源并对所有人可用。
+据说，Shay 的妻子还在等着她的食谱搜索引擎…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;安装-elasticsearch&#34;&gt;安装 Elasticsearch&lt;/h3&gt;
+&lt;p&gt;安装之前需要注意SpringBoot和Elasticsearch的&lt;strong&gt;版本对应关系&lt;/strong&gt;：
+SpringBoot官网说明：&lt;a href=&#34;https://docs.spring.io/spring-data/elasticsearch/docs/4.2.0/reference/html/#preface.metadata&#34;&gt;https://docs.spring.io/spring-data/elasticsearch/docs/4.2.0/reference/html/#preface.metadata&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如图：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-12a7497eab4a8264.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下载：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-9952b3d764832a98.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里还要注意 Elasticsearch 和 jdk 的版本要求：&lt;a href=&#34;https://www.elastic.co/cn/support/matrix#matrix_jvm&#34;&gt;官网说明&lt;/a&gt;
+&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-dc80692f56bf7d89.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载完成后，可以看到是一个压缩包，我们直接解压在 E 盘上，然后打开 bin 目录下的 elasticsearch.bat 文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-0b7732e1ab0043ab.png&#34; alt=&#34;image.png&#34;&gt;
+等待一段时间后，可以看到小黑框输出一行 start ，就说明我们的 Elasticsearch 已经跑起来了，我们访问地址：&lt;a href=&#34;http://127.0.0.1:9200/&#34;&gt;http://127.0.0.1:9200/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-d43ddb0eb44e662b.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;安装-kibana&#34;&gt;安装 Kibana&lt;/h3&gt;
+&lt;p&gt;这是一个官方推出的把 Elasticsearch 数据可视化的工具，官网在这里：&lt;a href=&#34;https://www.elastic.co/cn/products/kibana&#34;&gt;【Kibana下载】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;步骤都差不多就省略了。。。。。。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;快速入门&#34;&gt;快速入门&lt;/h3&gt;
+&lt;p&gt;基础知识建议查看官方文档：&lt;a href=&#34;https://www.elastic.co/guide/cn/elasticsearch/guide/current/getting-started.html&#34;&gt;官方文档&lt;/a&gt;
+&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-a8eadcd3e7296a46.png&#34; alt=&#34;image.png&#34;&gt;
+&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-65df62cbc7793323.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方文档非常的友好，是中文版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;ik-分词器&#34;&gt;ik 分词器&lt;/h3&gt;
+&lt;p&gt;IK Analyzer 是一个开源的，基于 java 语言开发的轻量级的&lt;strong&gt;中文分词工具包&lt;/strong&gt;。
+Elasticsearch自带的分词器对&lt;strong&gt;中文分词&lt;/strong&gt;不太友好，ik 分词器是对中文进行分词的工具，所以我们下载来使用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ik分词器是我们最常用的分词器，也常常和 java 代码一起使用。【ik分词器下载】 &lt;a href=&#34;https://github.com/medcl/elasticsearch-analysis-ik/releases&#34;&gt;https://github.com/medcl/elasticsearch-analysis-ik/releases&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载好解压后，剪贴到E:elasticsearch-7.9.3\plugins\目录下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-502a6c7b30c74dce.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;elasticsearch-集成-springboot-简单示例&#34;&gt;Elasticsearch 集成 SpringBoot 简单示例&lt;/h3&gt;
+&lt;h3 id=&#34;一springboot模版方式接入&#34;&gt;一、SpringBoot模版方式接入&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;pom包依赖：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-maven&#34; data-lang=&#34;maven&#34;&gt;&amp;lt;!--引入ElasticSearch依赖--&amp;gt;
+&amp;lt;dependency&amp;gt;
+  &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;spring-boot-starter-data-elasticsearch&amp;lt;/artifactId&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;第二步新建实体类&#34;&gt;第二步：新建实体类&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Article类：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Data&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@Document&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;codeplayer&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Article&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Serializable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;serialVersionUID&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;4464567572629455945L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@Id&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;articleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// analyzer = &amp;#34;ik_max_word&amp;#34; **常用**
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;// 会将文本做最细粒度的拆分，比如会将“中华人民共和国人民大会堂”拆分为“中华人民共和国、中华人民、中华、华人、人民共和国、人民、共和国、大会堂、大会、会堂等词语。
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@Field&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FieldType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;store&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;analyzer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;ik_max_word&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// analyzer = &amp;#34;ik_smart&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;// 会做最粗粒度的拆分，比如会将“中华人民共和国人民大会堂”拆分为中华人民共和国、人民大会堂。
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@Field&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FieldType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;store&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;analyzer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;ik_max_word&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&#34;nd&#34;&gt;@Field&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FieldType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;第三步dao-层&#34;&gt;第三步：Dao 层&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;ArticleDao：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.codeplayer.entity.Article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.springframework.data.elasticsearch.repository.ElasticsearchRepository&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ArticleRepository&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ElasticsearchRepository&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;{&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;第四步controller-层&#34;&gt;第四步：Controller 层&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;CRUD：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@RestController&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ArticleController&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Autowired&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ArticleRepository&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;articleRepostitory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@PostMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/addArticle&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addArticle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTitle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setContent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;valueOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;articleRepostitory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;save&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 返回id做验证
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@DeleteMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/deleteArticle&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;deleteArticle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;articleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;articleRepostitory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;deleteById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;articleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Success!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@PutMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/updateArticle&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;updateArticle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;articleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setArticleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;articleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTitle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setContent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;valueOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;articleRepostitory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;save&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 返回id做验证
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@GetMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/getArticle&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getArticle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArticleId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;articleRepostitory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;findById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@GetMapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/getAllArticle&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Iterable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getAllArticle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;articleRepostitory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;findAll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;第五步测试&#34;&gt;第五步：测试&lt;/h4&gt;
+&lt;p&gt;完成！！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些CRUD方法都来自 org.springframework.data.repository包下的
+Interface CrudRepository&amp;lt;T,ID&amp;gt;类
+【api文档：】&lt;a href=&#34;https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html&#34;&gt;https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;二high-level-java-rest-client方式接入&#34;&gt;二、High Level Java REST Client方式接入&lt;/h3&gt;
+&lt;p&gt;这是第二种方式，官方也提供了专门的文档学习，这里也省略了，有兴趣的小伙伴可以作为进阶学习！！下面是官方文档：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;官方High Level Java REST Client操作文档：&lt;/strong&gt;&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-document-index.html&#34;&gt;https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-document-index.html&lt;/a&gt;
+&lt;img src=&#34;https://gitee.com/codeplayer-zzy/codeplayer-blog-table/raw/master/img/23771092-e0c4aafddf648503.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;结语&#34;&gt;结语&lt;/h3&gt;
+&lt;p&gt;到目前为止 Elasticsearch 我们也算入门了，学习并掌握一个技术还需要不断学习。加油！！&lt;/p&gt;
+&lt;p&gt;推荐阅读：
+1.&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-document-index.html&#34;&gt;https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-document-index.html&lt;/a&gt;
+2.&lt;a href=&#34;https://www.elastic.co/guide/cn/elasticsearch/guide/current/getting-started.html&#34;&gt;https://www.elastic.co/guide/cn/elasticsearch/guide/current/getting-started.html&lt;/a&gt;
+3. &lt;a href=&#34;https://www.jianshu.com/p/1df1529aaca7&#34;&gt;https://www.jianshu.com/p/1df1529aaca7&lt;/a&gt;
+4.&lt;a href=&#34;https://www.jianshu.com/p/de838a665eec&#34;&gt;https://www.jianshu.com/p/de838a665eec&lt;/a&gt;&lt;/p&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/" term="功能实现" label="功能实现" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/elasticsearch/" term="elasticsearch" label="elasticsearch" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">CSS 【快速学习】！</title>
+            <link rel="alternate" type="text/html" href="https://codeplayer-zzy.github.io/posts/css/" />
+            <id>https://codeplayer-zzy.github.io/posts/css/</id>
+            <updated>2021-06-12T13:25:57&#43;08:00</updated>
+            <published>2021-06-09T11:56:17&#43;08:00</published>
+            <author>
+                    <name>codeplayer</name>
+                    <uri>https://codeplayer-zzy.github.io/</uri>
+                    <email>2775152443@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;css 总结！！ 【快速入门篇】&lt;/p&gt;……</summary>
+            
+                <content type="html">&lt;p&gt;css 总结！！ 【快速入门篇】&lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学习Code以来一直有一个最大的病痛，每每学习了新的知识，但过不了几天就要忘记大半，等到需要的时候才又去翻各种帖子补回来，可偏偏找帖子又各种难。这学习效率也太低了吧。
+于是乎我就想把学的知识写下来。欢迎评论！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我是一个对Code充满兴趣的人。不喜勿喷啊！哈哈
+（ps：在学习之前你需要对HTML有所了解。 ）
+开整：&lt;strong&gt;看图！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/23771092-5cd7197a58bf531e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;CSS知识梳理.jpg&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;前言&#34;&gt;前言&lt;/h4&gt;
+&lt;p&gt;前端三大语言HTML、CSS、JavaScript，大部分人入门都会去看&lt;a href=&#34;https://www.w3school.com.cn/h.asp&#34;&gt;w3cschool&lt;/a&gt;或&lt;a href=&#34;https://www.runoob.com/html/html-tutorial.html&#34;&gt;菜鸟教程&lt;/a&gt;吧，但像我又总是觉得学的不是太明白（可能我比较笨吧哈哈）。最近博主又双叒叕去复习了前端语言，于是就有了这篇文章，话不多说开始。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;1css初识及入门&#34;&gt;1.CSS初识及入门&lt;/h4&gt;
+&lt;h5 id=&#34;11-css简介&#34;&gt;1.1 CSS简介&lt;/h5&gt;
+&lt;p&gt;CSS也称层叠样式表， 一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS的发展史：CSS共有四个版本，CSS1.0&amp;gt;CSS2.0&amp;gt;CSS2.1&amp;gt;CSS3
+&lt;strong&gt;（目前最新为CSS3）&lt;/strong&gt;。&lt;/p&gt;
+&lt;h5 id=&#34;12-四种css导入方式&#34;&gt;1.2 四种CSS导入方式&lt;/h5&gt;
+&lt;p&gt;CSS的引入方式共有三种：行内样式、内部样式表、外部样式表。&lt;strong&gt;（优先级：就近原则）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一、行内样式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最直接最简单的一种：在标签中，编写一个style属性即可。如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1 style=&amp;quot;font-size: 10px&amp;quot;&amp;gt;我是标题&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;二、内部样式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一般情况下将CSS代码写在&lt;strong&gt;头部标签&lt;/strong&gt;中，并用&lt;strong&gt;style标签&lt;/strong&gt;进行声明。如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;
+   h1 {
+        color: green;
+    }
+ &amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;三、外部样式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;两种写法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;链接式：（推荐）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1、属于XHTML
+2、优先加载CSS文件到页面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/style.css&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;导入式：（不推荐）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1、属于CSS2.1
+2、先加载HTML结构在加载CSS文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;    
+    @import url(&amp;quot;css/style.css&amp;quot;); 
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;13-css的选择器&#34;&gt;1.3 CSS的选择器&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;摘自：&lt;a href=&#34;http://www.ruanyifeng.com/blog/2009/03/css_selectors.html&#34;&gt;阮一峰的网络日志&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一、基本选择器&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;通用元素选择器，匹配任何元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;E&lt;/td&gt;
+&lt;td&gt;标签选择器，匹配所有使用E标签的元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;.p&lt;/td&gt;
+&lt;td&gt;class选择器，匹配所有class属性中包含p的元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;#a&lt;/td&gt;
+&lt;td&gt;id选择器，匹配所有id属性等于a的元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;实例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*{ margin:0; padding:0; }
+
+div { font-size:2em; }
+
+.p { background:#ff0; }
+
+div.p { background:#ff0; }
+
+#a { background:#ff0; }
+
+p#a { background:#ff0; }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;二、层次选择器&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;E,F&lt;/td&gt;
+&lt;td&gt;多元素选择器，同时匹配所有E元素或F元素，E和F之间用逗号分隔&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;E F&lt;/td&gt;
+&lt;td&gt;后代元素选择器，匹配所有属于E元素后代的F元素，E和F之间用空格分隔&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;E &amp;gt; F&lt;/td&gt;
+&lt;td&gt;子元素选择器，匹配所有E元素的子元素F&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;E + F&lt;/td&gt;
+&lt;td&gt;相邻兄弟选择器，匹配所有紧随E元素之后的同级元素F&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;实例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;div p { color:#f00; }
+
+#nav li { display:inline; }
+
+#nav a { font-weight:bold; }
+
+div &amp;gt; strong { color:#f00; }
+
+p + p { color:#f00; }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;三、伪类&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;E:first-child&lt;/td&gt;
+&lt;td&gt;匹配父元素的第一个子元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;E:link&lt;/td&gt;
+&lt;td&gt;匹配所有未被点击的链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;E:visited&lt;/td&gt;
+&lt;td&gt;匹配所有已被点击的链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;E:active&lt;/td&gt;
+&lt;td&gt;匹配鼠标已经其上按下、还没有释放的E元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;E:hover&lt;/td&gt;
+&lt;td&gt;匹配鼠标悬停其上的E元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;E:focus&lt;/td&gt;
+&lt;td&gt;匹配获得当前焦点的E元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;E:lang(c)&lt;/td&gt;
+&lt;td&gt;匹配lang属性等于c的E元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;实例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p:first-child { font-style:italic; }
+
+input[type=text]:focus { color:#000; background:#ffe; }
+
+input[type=text]:focus:hover {background:#fff; }
+
+q:lang(sv) { quotes: &amp;quot;\201D&amp;quot; &amp;quot;\201D&amp;quot;&amp;quot;\2019&amp;quot; &amp;quot;\2019&amp;quot;; }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;四、伪元素&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;E:first-line&lt;/td&gt;
+&lt;td&gt;匹配E元素的第一行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;E:first-letter&lt;/td&gt;
+&lt;td&gt;匹配E元素的第一个字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;E:before&lt;/td&gt;
+&lt;td&gt;在E元素之前插入生成的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;E:after&lt;/td&gt;
+&lt;td&gt;在E元素之后插入生成的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;实例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p:first-line { font-weight:bold; color;#600; }
+
+.preamble:first-letter { font-size:1.5em; font-weight:bold; }
+
+.cbb:before { content:&amp;quot;&amp;quot;; display:block; height:17px; width:18px; 
+background:url(top.png) no-repeat 0 0; margin:0 0 0 -18px; }
+
+a:link:after { content: &amp;quot; (&amp;quot; attr(href) &amp;quot;) &amp;quot;; }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;五、属性选择器&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;E[att^=&amp;quot;val&amp;quot;]&lt;/td&gt;
+&lt;td&gt;属性att的值以&amp;quot;val&amp;quot;开头的元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;E[att$=&amp;quot;val&amp;quot;]&lt;/td&gt;
+&lt;td&gt;属性att的值以&amp;quot;val&amp;quot;结尾的元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;E[att*=&amp;quot;val&amp;quot;]&lt;/td&gt;
+&lt;td&gt;属性att的值包含&amp;quot;val&amp;quot;字符串的元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;实例：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;div[id^=&amp;quot;nav&amp;quot;] { background:#ff0; }&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2美化网页&#34;&gt;2.美化网页&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;2.1 CSS 常用背景属性：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*把元素的背景颜色设置为灰色*/
+body {background-color： gray;} 
+
+/*为元素的class属性设置背景图片*/
+body.flower {background-image: url(image/sun.jpg);}
+
+/*设置背景重复 no-repeat;repeat-x水平;repeat-y垂直*/
+body {background-repeat: no-repeat;}
+
+/*背景定位 ceter;top;bottom;right;left*/
+body { background-position: center; }
+
+/*百分数值和长度值*/
+body {background-position: 66% 33%; //50px 100px}
+
+/*背景关联 默认值*&amp;lt;u&amp;gt;scroll&amp;lt;/u&amp;gt;*;fixed;inherit*/
+body {background-attachment: fixed;}
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;推荐一个渐变效果网站httpwwwgrabientcomhttpwwwgrabientcom&#34;&gt;&amp;gt;推荐一个渐变效果网站：&lt;a href=&#34;http://www.grabient.com/&#34;&gt;http://www.grabient.com/&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;2.2 CSS 常用文本属性&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*行高度*/
+p {line-height: 10px;}
+
+/*缩进文本*/
+p {text-indent: 2em;} //还可以使用负值，实现不同效果，如“悬挂缩进”
+
+/*水平对齐 left; right;center*/
+p {text-align: center;}
+
+/*字间隔*/
+p {word-spacing: 5px;}
+
+/*字母间隔*/
+p {leter-spacing: 5px;}
+
+/*文本修饰 noe;underline;overline;line-through;blink*/
+p {text-decoration: none;} //常用于去除下划线}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;2.3 CSS 常用字体属性：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*字体系列*/
+body {font-family: 微软雅黑；}
+
+/*字体大小*/
+h1 {font-size: 60px;}
+
+/*字体加粗*/
+p {font-weight: bold;}
+
+/*字体风格*/
+p {font-style: normal;} //文本正常显示
+p {font-style: italic;} //文本斜体显示
+p {font-style: oblique;} //文本倾斜显示
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;2.4 CSS 链接：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*链接的四种状态*/
+a:link {color:#FF0000;}          /* 未被访问的链接 */
+a:visited {color:#00FF00;}      /* 已被访问的链接 */
+a:hover {color:#FF00FF;}       /* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}      /* 正在被点击的链接 */
+当为链接的不同状态设置样式时，请按照以下次序规则：
+*     a:hover 必须位于 a:link 和 a:visited 之后
+*     a:active 必须位于 a:hover 之后
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;2.5 CSS 列表基础：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*简写列表样式*/
+li {list-style : url(example.gif) square inside；} //list-style 的值可以按任何顺序列出，而且这些值都可以忽略。
+
+/*列表标志位置*/
+ul {list-style-position : inside;} 内部
+
+/*列表类型*/
+ul {list-style-type : square;} //设置无序列表中的列表项标志设置为方块，
+还有很多如：circle; upper-roman;...
+
+/*列表项图像*/
+ul li {list-style-image : url(xxx.gif);}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;3-盒子模型&#34;&gt;3. 盒子模型&lt;/h4&gt;
+&lt;h5 id=&#34;盒子概述&#34;&gt;盒子概述&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/23771092-e5f366d99f3b6f43.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;盒子模型.jpg&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;margin:外边距&lt;/li&gt;
+&lt;li&gt;border:边框&lt;/li&gt;
+&lt;li&gt;padding：内边距&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;元素框的最内部分是实际的内容，直接包围内容的是&lt;strong&gt;内边距&lt;/strong&gt;。内边距呈现了元素的背景。内边距的边缘是&lt;strong&gt;边框&lt;/strong&gt;。边框以外是&lt;strong&gt;外边距&lt;/strong&gt;，&lt;strong&gt;外边距默认是透明的&lt;/strong&gt;，因此不会遮挡其后的任何元素。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CSS padding 内边距&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;padding-top&lt;/li&gt;
+&lt;li&gt;padding-right&lt;/li&gt;
+&lt;li&gt;padding-bottom&lt;/li&gt;
+&lt;li&gt;padding-left&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;/*单边内边距*/
+h1 {padding-top: 10px;}
+
+/*按照上下、左右设置内边距*/
+h1 {padding: 10px 20px;}
+
+/*按照上、右、下、左的顺序分别设置内边距*/
+h1 {padding: 10px 25px 10px 25px;}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Tip：&lt;strong&gt;CSS border 边框&lt;/strong&gt;与&lt;strong&gt;CSS margin 外边距&lt;/strong&gt;同上面内边距一样设置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CSS border 边框的样式：&lt;/strong&gt;
+（更多样式请点&lt;a href=&#34;https://www.w3school.com.cn/cssref/index.asp&#34;&gt;这里&lt;/a&gt;）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*边框*/
+div {
+    border-style:dotted solid double dashed; //上边框是点状、右边框是实线、下边框是双线、左边框是虚线
+    border-color:red green blue pink; //边框颜色
+    border-width: 5px; //边框的宽度
+    border-color: transparent; //背景颜色为透明
+    border-radius：2px; //圆角边框
+    box-shadow: 10px 10px 5px #888888; //设置阴影
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Tip：盒子模型尺寸计算：&lt;strong&gt;border+margin+padding+内容元素&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;4-定位&#34;&gt;4. 定位&lt;/h4&gt;
+&lt;h5 id=&#34;41-概述&#34;&gt;4.1 概述&lt;/h5&gt;
+&lt;p&gt;CSS 为定位和浮动提供了一些属性，利用这些属性，可以建立列式布局，将布局的一部分与另一部分重叠，还可以完成多年来通常需要使用多个表格才能完成的任务。（原文来自w3chool）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一切皆为框&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;div、h1 或 p 元素常常被称为&lt;strong&gt;块级元素&lt;/strong&gt;。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“&lt;strong&gt;行内元素&lt;/strong&gt;”，这是因为它们的内容显示在行中，即“&lt;strong&gt;行内框&lt;/strong&gt;”。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*display 属性*/
+div {
+    display: block; //变为块级元素
+    display: inline; //变为行内元素
+    display: inline-block; //变为行内元素的块级元素
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;42-css-定位&#34;&gt;4.2 CSS 定位&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;CSS 相对定位&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果对一个元素进行相对定位，它将出现在它所在的位置上。然后，可以通过设置垂直或水平位置，让这个元素“相对于”它的起点进行移动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CSS 绝对定位&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;绝对定位使元素的位置与文档流无关，因此不占据空间。这一点与相对定位不同，相对定位实际上被看作普通流定位模型的一部分，因为元素的位置相对于它在普通流中的位置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;fixed 固定定位&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 &amp;quot;left&amp;quot;, &amp;quot;top&amp;quot;, &amp;quot;right&amp;quot; 以及 &amp;quot;bottom&amp;quot; 属性进行规定。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#relative {
+  position: relative; //absolute;fixed; 
+  left: 30px;
+  top: 20px;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;z-index 属性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+默认的 z-index 是 0，元素可拥有负的 z-index 属性值。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#z-index {
+        position:absolute;
+        left:0px;
+        top:0px;
+        z-index:-1
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;43-浮动&#34;&gt;4.3 浮动&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;float 浮动&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;left  元素向左浮动&lt;/li&gt;
+&lt;li&gt;right  元素向右浮动&lt;/li&gt;
+&lt;li&gt;none  默认值元素不浮动，并会显示在其在文本中出现的位置&lt;/li&gt;
+&lt;li&gt;inherit  规定应该从父元素继承 float 属性的值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;code&gt;div {float: left;左浮动}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;clear 清除浮动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;code&gt;div {clear: left; //清除左浮动}&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;怎样解决父级边框塌陷问题&#34;&gt;&amp;gt;怎样解决父级边框塌陷问题？&lt;/h5&gt;
+&lt;p&gt;**1. 增加父级元素的高度 **&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#father{
+        border: 2px #000 solid;
+        width: 100px;
+        height: 500px; //这个
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;2. 增加一个空的div标签，设置属性&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;clear&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; 
+.clear{
+    clear: both; //清除两边浮动
+    margin: 0; 
+    padding: 0; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;3. 父级元素增加属性&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;overflow: hidden; //溢出时边框大小根据内容适应
+overflow: none;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;4. 父类增加一个伪类（推荐）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#father:after {
+        content: &#39;&#39;;
+        display: block;
+        clear: both;
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;5-进一步学习&#34;&gt;5. 进一步学习&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;JavaScript教程 | 廖雪峰：&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/1022910821149312&#34;&gt;https://www.liaoxuefeng.com/wiki/1022910821149312&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CSS小练习：&lt;a href=&#34;https://pan.baidu.com/s/1Cmg8ciWf1-QuabGbidxHAA&#34;&gt;https://pan.baidu.com/s/1Cmg8ciWf1-QuabGbidxHAA&lt;/a&gt;  提取码：0s54&lt;/li&gt;
+&lt;li&gt;w3cschool：&lt;a href=&#34;https://www.w3school.com.cn/h.asp&#34;&gt;https://www.w3school.com.cn/h.asp&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;6-结语&#34;&gt;6. 结语&lt;/h4&gt;
+&lt;p&gt;非常感谢各位看官&lt;strong&gt;看到这里&lt;/strong&gt;，如果觉得本篇文章还写的不错，那么&lt;strong&gt;求点赞&lt;/strong&gt;，&lt;strong&gt;求关注&lt;/strong&gt;，&lt;strong&gt;求留言&lt;/strong&gt;。如果文章有什么不妥的地方请给我留言，或私聊我，谢谢！&lt;/p&gt;
+&lt;p&gt;写作不易，能得到各位看官的&lt;strong&gt;支持&lt;/strong&gt;和&lt;strong&gt;认可&lt;/strong&gt;，就是对我写作的最大动力，我们下期再见！&lt;/p&gt;
+&lt;h4 id=&#34;参考资料&#34;&gt;参考资料&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;w3cschool：&lt;a href=&#34;https://www.w3school.com.cn/h.asp&#34;&gt;https://www.w3school.com.cn/h.asp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;阮一峰的网络日志：&lt;a href=&#34;http://www.ruanyifeng.com/blog/2009/03/css_selectors.html&#34;&gt;http://www.ruanyifeng.com/blog/2009/03/css_selectors.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;grabient: &lt;a href=&#34;http://www.grabient.com/&#34;&gt;http://www.grabient.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;遇见狂神说：&lt;a href=&#34;https://www.bilibili.com/video/BV1YJ411a7dy&#34;&gt;https://www.bilibili.com/video/BV1YJ411a7dy&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/categories/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/css/" term="css" label="css" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://codeplayer-zzy.github.io/tags/html/" term="html" label="html" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
